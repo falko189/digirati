@@ -43,7 +43,10 @@ class Service {
      */
 
     static public function sortBoardingCards($boardingCards) {
-
+        /**
+         * For the sort function I supposed to order it by using one array with the order in it 
+         * because otherwise google api's for discover the location is needed
+         */
         $callback = function ($a, $b) {
             $order = array("Digirati Office London", "Heathrow Airport", "Newcastle Airport", "Edinburgh Waverly");
             $posA = array_search($a->getOrigin(), $order);
